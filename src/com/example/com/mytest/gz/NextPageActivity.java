@@ -5,11 +5,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AnalogClock;
 import android.widget.Button;
 
 public class NextPageActivity extends Activity {
 
 	Button btnGoBack = null;
+	AnalogClock clock = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,7 @@ public class NextPageActivity extends Activity {
 		setContentView(R.layout.activity_next_page);
 		
 		btnGoBack = (Button)findViewById(R.id.btnGoBack);
+		clock = (AnalogClock)findViewById(R.id.analogClock1);
 		
 		btnGoBack.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {

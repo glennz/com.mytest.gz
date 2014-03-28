@@ -37,7 +37,9 @@ public final class R {
     }
     public static final class id {
         public static final int SecondaryProgress=0x01010000;
-        public static final int action_settings=0x7f090006;
+        public static final int action_settings=0x7f090007;
+        public static final int action_signout=0x7f090008;
+        public static final int analogClock1=0x7f090006;
         public static final int btnGoBack=0x7f090005;
         public static final int btnNextPage=0x7f090004;
         public static final int btnStart=0x7f090002;
