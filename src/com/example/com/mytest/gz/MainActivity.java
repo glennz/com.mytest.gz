@@ -2,6 +2,7 @@ package com.example.com.mytest.gz;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import android.widget.SeekBar;
 public class MainActivity extends Activity {
 	
 	Button btnStart = null;
+	Button btnNextPage = null;
 	ProgressBar spinningBar = null;
 	SeekBar seekBar1 = null;
 
@@ -20,13 +22,20 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		btnStart = (Button)findViewById(R.id.btnStart);
+		btnNextPage = (Button)findViewById(R.id.btnNextPage);
 		spinningBar = (ProgressBar)findViewById(R.id.spinningBar1);
 		seekBar1 = (SeekBar)findViewById(R.id.seekBar1);
-		//seekBar1.setMax(1000);
+		seekBar1.setMax(1000);		
 		
 		btnStart.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
 		    	btnStart_Click();
+		    }
+		});
+		
+		btnNextPage.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+		    	btnNextPage_Click();
 		    }
 		});
 	}
@@ -47,5 +56,12 @@ public class MainActivity extends Activity {
 		else{
 			spinningBar.setVisibility(4);
 		}
+	}
+	
+	private void btnNextPage_Click(){
+		
+		Intent intent = new Intent(this, NextPageActivity.class);
+		startActivity(intent);
+		overridePendingTransition(R.anim.right_in, R.anim.left_out);
 	}
 }

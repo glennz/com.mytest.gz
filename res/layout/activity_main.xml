@@ -47,7 +47,14 @@
         android:paddingRight="15dp"
         android:thumb="@drawable/thumbler_small"
         android:indeterminate="false"  />
-    
-    
+
+    <Button
+        android:id="@+id/btnNextPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Next Page" />
 
 </RelativeLayout>
